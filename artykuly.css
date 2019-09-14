@@ -5,7 +5,7 @@
 }
 
 body{
-   background: var(--day-theme-color);
+   background: url(leaves.png);
    color: rgb(58, 58, 58);
  }
  
