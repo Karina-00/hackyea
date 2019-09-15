@@ -9,6 +9,7 @@ var x;
 var y;
 var z;
 
+
 var k = 0;
 
 function test(temperat,wind,chmurki,x,y,z)
