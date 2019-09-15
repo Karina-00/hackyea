@@ -7,4 +7,4 @@ Zainstalowanie venv,
 3,75. Wpisz pip install djangorestframework
 3,8. Wpisz pip install django-cors-headers
 3,9. Zainstaluj wsparcie do pythona na visual studio code
-4. Gotowe
+4. Gotowe!
