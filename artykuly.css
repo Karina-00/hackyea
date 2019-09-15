@@ -86,7 +86,12 @@ body{
     padding: 20px;
  }
 
-
+ .btn{
+   background-color:rgb(7, 119, 17);
+   padding:2px;
+   outline: none;
+   border: 2px solid rgb(4, 82, 11);
+ }
 
  /* flex */
 
