@@ -12,31 +12,31 @@ var z;
 var k = 0;
 
 function test(temperat,wind,chmurki,x,y,z)
-{  
-    if(k<1){
+{
+    if(k<2){
         if(temperat>30)
         {
-            document.getElementById('result').innerHTML+="<div><div class='termometr'><p>It's gonna be hot out there! You better hide, the sun is watching you...</p></div><div class='napis'><div>"+x+"</br>"+y+":"+z+"</div> </br> <div>"+temperat+"&#176C</div> </br> "+wind+" m/s</br>"+chmurki+"</div></div>";
+            document.getElementById('result').innerHTML+="<div class='ramka'><div class='termometr'><p>It's gonna be hot out there! You better hide, the sun is watching you...</p></div><div class='napis'><div>"+x+"</br>"+y+":"+z+"</div> </br> <div>"+temperat+"&#176C</div> </br> "+wind+" m/s</br>"+chmurki+"</div></div>";
         }
         else if (temperat>25)
         {
-            document.getElementById('result').innerHTML+="<div><div class='termometr'><p>It will be hot, but stable. Wear something nice and say hello to the sun!</p></div><div class='napis'><div>"+x+"</br>"+y+":"+z+"</div> </br> <div>"+temperat+"&#176C</div> </br> "+wind+" m/s</br>"+chmurki+"</div></div>";
+            document.getElementById('result').innerHTML+="<div class='ramka'><div class='termometr'><p>It will be hot, but stable. Wear something nice and say hello to the sun!</p></div><div class='napis'><div>"+x+"</br>"+y+":"+z+"</div> </br> <div>"+temperat+"&#176C</div> </br> "+wind+" m/s</br>"+chmurki+"</div></div>";
         }
         else if (temperat>20)
         {
-            document.getElementById('result').innerHTML+="<div><div class='termometr'><p>Well, it's nice, but also a nice cardigan should be great for you</p></div><div class='napis'><div>"+x+"</br>"+y+":"+z+"</div> </br> <div>"+temperat+"&#176C</div> </br> "+wind+" m/s</br>"+chmurki+"</div></div>";
+            document.getElementById('result').innerHTML+="<div class='ramka'><div class='termometr'><p>Well, it's nice, but also a nice cardigan should be great for you</p></div><div class='napis'><div>"+x+"</br>"+y+":"+z+"</div> </br> <div>"+temperat+"&#176C</div> </br> "+wind+" m/s</br>"+chmurki+"</div></div>";
         }
         else if(temperat>10)
         {
-            document.getElementById('result').innerHTML+="<div class='place col-md-6 mblank-3'><div class='termometr'><p>Get a jacket with you! It can be nice or not</p></div><div class='napis'><div style='font-size:30px;'>"+x+"</br>"+y+":"+z+"</div> </br> <div>"+temperat+"&#176C</div> </br> "+wind+" m/s</br>"+chmurki+"</div></div>";
+            document.getElementById('result').innerHTML+="<div class='place col-md-6 mblank-3 ramka'><div class='termometr'><p>Get a jacket with you! It can be nice or not</p></div><div class='napis'><div>"+x+"</br>"+y+":"+z+"</div> </br> <div>"+temperat+"&#176C</div> </br> "+wind+" m/s</br>"+chmurki+"</div></div>";
         }
         else if(temperat>0)
         {
-            document.getElementById('result').innerHTML+="<div><div class='termometr'><p>Winter jacket is neccessary today</p></div><div class='napis'>"+x+"</br>"+y+":"+z+" </br> "+temperat+"&#176C </br> "+wind+" m/s</br>"+chmurki+"</div></div>";
+            document.getElementById('result').innerHTML+="<div class='ramka'><div class='termometr'><p>Winter jacket is neccessary today</p></div><div class='napis'><div>"+x+"</br>"+y+":"+z+"</div></br> <div>"+temperat+"&#176C</div> </br> "+wind+" m/s</br>"+chmurki+"</div></div>";
         }
         else if(temperat<=0)
         {
-            document.getElementById('result').innerHTML+="<div><div class='termometr'><p>It is definetely cold or very cold. Winter is coming.</p></div><div class='napis'>"+x+"</br>"+y+z+" </br> "+temperat+"&#176C </br> "+wind+" m/s</br>"+chmurki+"</div></div>";
+            document.getElementById('result').innerHTML+="<div class='ramka'><div class='termometr'><p>It is definetely cold or very cold. Winter is coming.</p></div><div class='napis'><div>"+x+"</br>"+y+":"+z+"</div> </br><div>"+temperat+"&#176C</div></br> "+wind+" m/s</br>"+chmurki+"</div></div>";
         }
         k++;
     }
@@ -60,7 +60,7 @@ function weather()
             var dataih=item.dt_txt.split(' ',2);
             var godzinka=dataih[1].split(':',3);
             test(Math.floor(item.main.temp-273), item.wind.speed, item.weather[0].description, dataih[0],godzinka[0],godzinka[1]);
-            
+
                 item.weather.forEach(function(ele)
                 {
                     chmurki=ele.description;
@@ -68,4 +68,5 @@ function weather()
 
         });
     })
+    k=0;
 }
