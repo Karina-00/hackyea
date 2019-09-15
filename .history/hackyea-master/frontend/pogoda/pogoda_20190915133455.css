@@ -1,0 +1,29 @@
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+}
+.ramka{
+    border: 1px solid rgba(0, 0, 0, 0.575);
+    background-color: rgba(127, 255, 212, 0.137);
+    margin-bottom: 3px;
+}
+.welcome
+{
+    margin-bottom: 3px;
+}
+#city{
+    margin-bottom: 3px;
+    padding: 3px;
+    border: 1px solid rgb(7, 119, 17);
+    text-align: center;
+}
+#search{
+    margin-bottom: 3px;
+    background: rgb(7, 119, 17);
+    color: white;
+    padding: 2px;
+    border:none;
+}
+#search:hover{
+    background: rgb(6, 131, 17);
+}
