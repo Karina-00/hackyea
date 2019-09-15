@@ -1,0 +1,39 @@
+main{
+   font-family: 'Source Sans Pro', sans-serif;
+   max-width: 960px;
+   margin: auto;
+}
+
+.smietniczki{
+   max-width: 960px;
+   margin: auto;
+   margin-bottom: 30px;
+}
+
+.smiec{
+   height: 200px;
+   vertical-align: center;
+   margin:auto;
+
+}
+.smietniczki ul{
+   width: 100%;
+   list-style: none;
+   cursor: pointer;
+   margin: auto;
+}
+.smietniczki ul li{
+   width: 24%;
+   display: inline-block;
+}
+
+
+.container{
+   display: flex;
+}
+
+@media screen and (max-width: 680px){
+   .smietniczki ul li{
+      width: 48%;
+   }
+}
