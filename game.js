@@ -19,6 +19,9 @@ let boy = document.querySelector(".chlopiec");
 let guzik = document.querySelector(".btn");
 guzik.addEventListener("click", start);
 
+
+
+
 function start()
 {
    console.log("jest");
